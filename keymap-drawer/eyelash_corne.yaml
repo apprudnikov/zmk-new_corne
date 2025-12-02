@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
-  QWERTY:
+  qwert:
   - {t: ']', s: '}'}
   - Q
   - W
@@ -35,7 +35,7 @@ layers:
   - C
   - V
   - B
-  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - N
   - M
@@ -43,13 +43,13 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '-', h: '$$mdi:apple-keyboard-option$$', s: _}
-  - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
+  - {t: '$$mdi:keyboard-tab$$', h: num l sys}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '$$mdi:keyboard-return$$', h: NUMBER}
-  - {t: '$$mdi:keyboard-esc$$', h: NUMBER}
+  - {t: '$$mdi:keyboard-return$$', h: f | symbol}
+  - {t: '$$mdi:keyboard-esc$$', h: f | symbol}
   - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: SYMBOL}
-  NUMBER:
+  - {t: '$$mdi:backspace-reverse-outline$$', h: num l sys}
+  f | symbol:
   - LWIN
   - F1
   - F2
@@ -84,7 +84,7 @@ layers:
   - F11
   - F12
   - Gui+$$mdi:keyboard-space$$
-  - $$mdi:volume-off$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '-', s: _}
   - {t: '=', s: +}
@@ -92,13 +92,13 @@ layers:
   - Ctl+2
   - Ctl+3
   - {t: '$$mdi:transfer$$', type: trans}
-  - Fn
+  - bt-cfg
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - FRTH
-  SYMBOL:
+  num l sys:
   - {t: '$$mdi:transfer$$', type: trans}
   - KP NUMLOCK
   - KP 7
@@ -147,104 +147,104 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
-  Fn:
-  - '&studio_unlock'
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
+  bt-cfg:
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - BT CLR ALL
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-scroll-wheel$$
-  - $$mdi:mouse-right-click-outline$$
-  - '&mkp MB4'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: BT DISC, h: '0'}
+  - {t: BT DISC, h: '1'}
+  - {t: BT DISC, h: '2'}
+  - {t: BT DISC, h: '3'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - $$mdi:progress-download$$
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-scroll-wheel$$
-  - $$mdi:mouse-right-click-outline$$
-  - PRINTSCREEN
-  - F12
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '4', s: '$$mdi:bluetooth-connect$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:progress-download$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - '&mkp MB5'
-  - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:progress-download$$
   - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - SCROLLLOCK
-  - PAUSE BREAK
-  - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
-  - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:progress-download$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   FRTH:
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
-  - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
 combos:
 - p: [1, 15, 29]
   k: '&soft_off'
