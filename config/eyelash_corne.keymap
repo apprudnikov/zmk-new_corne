@@ -4,7 +4,9 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -27,8 +29,9 @@
 &soft_off { hold-time-ms = <2000>; };
 
 &lt {
-    tapping-term-ms = <130>;
-    flavor = "balanced";
+    tapping-term-ms = <170>;
+    flavor = "hold-preferred";
+    retro-tap;
 };
 
 &mt { tapping-term-ms = <170>; };
@@ -70,31 +73,31 @@
         compatible = "zmk,keymap";
 
         ZERO {
-            display-name = "QWERTY";
+            display-name = "qwert";
             bindings = <
-&kp RBKT         &kp Q  &kp W  &kp E      &kp R             &kp T                                     &mmv MOVE_UP                     &kp Y      &kp U                 &kp I      &kp O    &kp P     &kp LBKT
-&mt LCTRL GRAVE  &kp A  &kp S  &kp D      &kp F             &kp G                     &mmv MOVE_LEFT  &mkp MB1        &mmv MOVE_RIGHT  &kp H      &kp J                 &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
-&mt LALT BSLH    &kp Z  &kp X  &kp C      &kp V             &kp B        &kp SPACE                    &mmv MOVE_DOWN                   &kp N      &kp M                 &kp COMMA  &kp DOT  &kp FSLH  &mt RALT MINUS
-                               &lt 2 TAB  &mt LSHIFT SPACE  &lt 1 ENTER                                                                &lt 1 ESC  &mt RSHIFT BACKSPACE  &lt 2 DEL
+&kp RBKT         &kp Q  &kp W  &kp E      &kp R             &kp T                                 &mmv MOVE_UP                     &kp Y      &kp U                 &kp I      &kp O    &kp P     &kp LBKT
+&mt LCTRL GRAVE  &kp A  &kp S  &kp D      &kp F             &kp G                 &mmv MOVE_LEFT  &mkp MB1        &mmv MOVE_RIGHT  &kp H      &kp J                 &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
+&mt LALT BSLH    &kp Z  &kp X  &kp C      &kp V             &kp B        &none                    &mmv MOVE_DOWN                   &kp N      &kp M                 &kp COMMA  &kp DOT  &kp FSLH  &mt RALT MINUS
+                               &lt 2 TAB  &mt LSHIFT SPACE  &lt 1 ENTER                                                            &lt 1 ESC  &mt RSHIFT BACKSPACE  &lt 2 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         FRST {
-            display-name = "NUMBER";
+            display-name = "f | symbol";
             bindings = <
-&kp LWIN  &kp F1  &kp F2   &kp F3   &kp F4   &kp CAPS                                       &mmv MOVE_UP                     &kp EXCL   &kp AT     &kp POUND         &kp DLLR          &kp PRCNT         &kp RWIN
-&trans    &kp F5  &kp F6   &kp F7   &kp F8   &kp PRINTSCREEN                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CARET  &kp AMPS   &kp STAR          &kp LPAR          &kp RPAR          &trans
-&trans    &kp F9  &kp F10  &kp F11  &kp F12  &kp LG(SPACE)    &kp C_MUTE                    &mmv MOVE_DOWN                   &kp MINUS  &kp EQUAL  &kp LC(NUMBER_1)  &kp LC(NUMBER_2)  &kp LC(NUMBER_3)  &trans
-                           &mo 3    &trans   &trans                                                                          &trans     &trans     &mo 4
+&kp LWIN  &kp F1  &kp F2   &kp F3   &kp F4   &kp CAPS                                   &mmv MOVE_UP                     &kp EXCL   &kp AT     &kp POUND         &kp DLLR          &kp PRCNT         &kp RWIN
+&trans    &kp F5  &kp F6   &kp F7   &kp F8   &kp PRINTSCREEN            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CARET  &kp AMPS   &kp STAR          &kp LPAR          &kp RPAR          &trans
+&trans    &kp F9  &kp F10  &kp F11  &kp F12  &kp LG(SPACE)    &trans                    &mmv MOVE_DOWN                   &kp MINUS  &kp EQUAL  &kp LC(NUMBER_1)  &kp LC(NUMBER_2)  &kp LC(NUMBER_3)  &trans
+                           &mo 3    &trans   &trans                                                                      &trans     &trans     &mo 4
             >;
 
             sensor-bindings = <&scroll_encoder>;
         };
 
         SCND {
-            display-name = "SYMBOL";
+            display-name = "num l sys";
             bindings = <
 &trans  &kp KP_NUMLOCK   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp SLASH                               &mmv MOVE_UP                     &kp PAGE_UP     &rgb_ug RGB_EFF  &kp K_PLAY_PAUSE  &kp K_NEXT       &kp C_VOL_UP       &trans
 &trans  &rgb_ug RGB_TOG  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT_ARROW  &kp DOWN_ARROW   &kp UP_ARROW      &kp RIGHT_ARROW  &kp C_VOLUME_DOWN  &trans
@@ -106,23 +109,24 @@
         };
 
         THRD {
-            display-name = "Fn";
+            display-name = "bt cfg";
             bindings = <
-&studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                                  &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&trans          &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                                       &trans       &trans     &trans                                                                   &trans       &trans     &trans
+&none  &bt BT_CLR_ALL  &none          &none          &none          &none                            &mmv MOVE_UP                     &none       &none        &none  &none  &none  &none
+&none  &bt BT_DISC 0   &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &none            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none       &none        &none  &none  &none  &none
+&none  &bt BT_SEL 0    &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &none  &trans                    &mmv MOVE_DOWN                   &sys_reset  &bootloader  &none  &none  &none  &none
+                                      &none          &out OUT_TOG   &none                                                             &none       &none        &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
+            label = "bt-cfg";
         };
 
         FRTH {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                                    &trans  &trans  &trans
+&none  &none  &none  &none  &none  &none                   &none         &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none            &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &trans           &none         &none  &none  &none  &none  &none  &none
+                     &none  &none  &none                                 &none  &none  &none
             >;
         };
     };
