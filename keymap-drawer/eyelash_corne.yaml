@@ -107,9 +107,9 @@ layers:
   - {t: /, s: '?'}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - PgUp
-  - RGB EFF
+  - {t: HOME, h: toggle}
   - PLAY PAUSE
-  - NEXT
+  - $$mdi:skip-next$$
   - $$mdi:volume-high$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -136,9 +136,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - PgDn
-  - RGB EFR
-  - CALC
-  - PREVIOUS
+  - END
+  - AL CALCULATOR
+  - $$mdi:skip-previous$$
   - MUTE
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
@@ -155,11 +155,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB EFF
+  - RGB BRI
+  - RGB SPI
+  - RGB SAI
+  - RGB HUI
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: BT DISC, h: '0'}
@@ -170,10 +170,10 @@ layers:
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB COLOR HSB(0,0,100)
+  - RGB COLOR HSB(0,100,52)
+  - RGB COLOR HSB(111,100,50)
+  - RGB COLOR HSB(222,100,50)
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -184,11 +184,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - $$mdi:progress-download$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB EFR
+  - RGB BRD
+  - RGB SPD
+  - RGB SAD
+  - RGB HUD
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
