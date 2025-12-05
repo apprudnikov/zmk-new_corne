@@ -29,7 +29,7 @@
 &soft_off { hold-time-ms = <2000>; };
 
 &lt {
-    tapping-term-ms = <130>;
+    tapping-term-ms = <135>;
     flavor = "hold-preferred";
 };
 
@@ -92,7 +92,7 @@
 &kp LWIN  &kp F1  &kp F2   &kp F3   &kp F4   &kp CAPS                                   &mmv MOVE_UP                     &kp EXCL   &kp AT     &kp POUND         &kp DLLR          &kp PRCNT         &kp RWIN
 &trans    &kp F5  &kp F6   &kp F7   &kp F8   &kp PRINTSCREEN            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CARET  &kp AMPS   &kp STAR          &kp LPAR          &kp RPAR          &trans
 &trans    &kp F9  &kp F10  &kp F11  &kp F12  &kp LG(SPACE)    &trans                    &mmv MOVE_DOWN                   &kp MINUS  &kp EQUAL  &kp LC(NUMBER_1)  &kp LC(NUMBER_2)  &kp LC(NUMBER_3)  &trans
-                           &mo 3    &trans   &trans                                                                      &trans     &trans     &mo 4
+                           &mo 3    &trans   &trans                                                                      &trans     &trans     &mo 3
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -121,15 +121,6 @@
 
             sensor-bindings = <&scroll_encoder>;
             label = "bt-cfg";
-        };
-
-        FRTH {
-            bindings = <
-&none  &none  &none  &none  &none  &none                   &none         &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none            &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &trans           &none         &none  &none  &none  &none  &none  &none
-                     &none  &none  &none                                 &none  &none  &none
-            >;
         };
     };
 };
